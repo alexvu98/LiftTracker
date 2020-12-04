@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="620.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LiftsController">
+   <children>
+      <HBox layoutX="29.0" layoutY="513.0" prefHeight="57.0" prefWidth="616.0" spacing="10.0">
+         <children>
+            <TextField fx:id="benchTextField" promptText="Bench Weight" />
+            <TextField fx:id="squatTextField" promptText="Squat Weight" />
+            <TextField fx:id="deadLiftTextField" promptText="Deadlifts Weight" />
+            <Button mnemonicParsing="false" onAction="#recordNewLift" text="Record New Lift" />
+         </children>
+      </HBox>
+      <TableView fx:id="liftTableView" layoutX="25.0" layoutY="299.0" prefHeight="200.0" prefWidth="603.0">
+        <columns>
+          <TableColumn fx:id="benchColumn" prefWidth="120.79998207092285" text="Bench Press (KG)" />
+          <TableColumn fx:id="passFailColumn" prefWidth="79.20001220703125" text="Pass/Fail" />
+            <TableColumn fx:id="squatColumn" prefWidth="137.5999755859375" text="Squat (KG)" />
+            <TableColumn fx:id="passFailColumn2" prefWidth="84.800048828125" text="Pass/Fail" />
+            <TableColumn fx:id="deadLiftColumn" minWidth="0.0" prefWidth="98.0" text="Dead Lift(KG)" />
+            <TableColumn fx:id="passFailColumn3" prefWidth="83.0" text="Pass/Fail" />
+        </columns>
+      </TableView>
+      <HBox fx:id="plates" layoutX="217.0" layoutY="34.0" prefHeight="200.0" prefWidth="410.0" style="-fx-border-color: Black; -fx-background-color: White;" />
+      <TextField fx:id="weightEnter" layoutX="14.0" layoutY="134.0" onAction="#set" />
+      <Button layoutX="171.0" layoutY="134.0" mnemonicParsing="false" onAction="#set" text="Set" />
+      <Text fx:id="currentWeightText" layoutX="217.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="306.13670349121094" />
+      <Label layoutX="14.0" layoutY="172.0" text="Please enter the weight in Kilograms" />
+      <Label fx:id="firstNameLabel" layoutX="29.0" layoutY="253.0" text="Label">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastNameLabel" layoutX="54.0" layoutY="276.0" text="Label">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="491.0" layoutY="570.0" mnemonicParsing="false" onAction="#goBackToParticipantScreen" text="Back to Participants" />
+   </children>
+</AnchorPane>
